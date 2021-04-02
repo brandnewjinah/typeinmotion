@@ -6,13 +6,14 @@ import Layout from "./components/Layout";
 
 //import pages
 import Home from "./pages/Home";
+import Daily from "./pages/Daily";
 
 const Routes = () => {
   return (
     <Router>
       <Switch>
         <Layout>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Daily} />
         </Layout>
       </Switch>
     </Router>

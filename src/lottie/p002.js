@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import styled, { css } from "styled-components";
 import lottie from "lottie-web";
 
-const P001 = () => {
+const P002 = () => {
   const container = useRef(null);
 
   useEffect(() => {
@@ -11,7 +11,7 @@ const P001 = () => {
       renderer: "svg",
       loop: true,
       autoplay: true,
-      animationData: require("./json/p001.json"),
+      animationData: require("./json/p002.json"),
     });
   }, []);
 
@@ -36,4 +36,4 @@ const Wrapper = styled.div`
   background-color: lavender;
 `;
 
-export default P001;
+export default P002;

@@ -25,7 +25,7 @@ const Flex = css`
 const Wrapper = styled.div`
   ${Flex}
   width: 100%;
-  height: 300px;
+  height: 240px;
   flex-direction: column;
   background-color: aliceblue;
   font-family: "Fira Sans Extra Condensed", sans-serif;

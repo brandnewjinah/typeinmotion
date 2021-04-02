@@ -1,6 +1,7 @@
-export const primaryFont = '"Fira Sans Extra Condensed", sans-serif';
+import { primaryFont } from "./Typography";
 
-export const typeScale = {
+export const mainTheme = {
+  primaryFont,
   header1: "2.25rem",
   header2: "1.75rem",
   header3: "1.5rem",
