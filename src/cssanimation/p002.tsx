@@ -29,8 +29,6 @@ const Wrapper = styled.div`
   overflow: hidden;
   background-color: aliceblue;
   -webkit-backface-visibility: hidden;
-  /*-webkit-perspective: 1000;
-  -webkit-transform: translate3d(0, 0, 0); */
 `;
 
 const Row1 = styled.div`
@@ -39,8 +37,6 @@ const Row1 = styled.div`
   .text {
     backface-visibility: hidden;
     -webkit-font-smoothing: antialiased;
-    /* transform: perspective(1px) translateZ(0);
-    -webkit-font-smoothing: subpixel-antialiased; */
   }
 
   @keyframes scale {

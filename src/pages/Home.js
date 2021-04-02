@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 //import libraries
 import styled from "styled-components";
@@ -8,54 +9,42 @@ import moment from "moment";
 import Grid from "../components/Grid";
 import Card from "../components/Cards/Card";
 import { mainTheme } from "../components/Tokens";
+import Pagination from "../utility/Pagination";
 
-//import css animation
-import P001 from "../cssanimation/p001";
-import P002 from "../cssanimation/p002";
-
-//import lottie
-import P001Lottie from "../lottie/p001";
-import P002Lottie from "../lottie/p002";
+//import animation components
+import { Animations } from "../helper/Animations";
 
 const Home = () => {
+  const history = useHistory();
   let startDate = moment("2021-04-01");
   let currenDate = moment();
   let today = currenDate.diff(startDate, "days") + 1;
 
+  const CSSAnimation = Animations[`a00${today}`];
+  const LOTTIEAnimation = Animations[`a00${today}Lottie`];
+
+  const handlePrev = () => {
+    let prevPage = today - 1;
+    history.push(`/${prevPage}`);
+  };
+
   return (
     <Wrapper>
-      <Row>
-        <Grid>
-          <Title>
-            <span className="day">Day</span>
-            <span className="num">02</span>
-          </Title>
-          <Card>
-            <P002 />
-            <p>css</p>
-          </Card>
-          <Card>
-            <P002Lottie />
-            <p>lottie</p>
-          </Card>
-        </Grid>
-      </Row>
-      <Row>
-        <Grid>
-          <Title>
-            <span className="day">Day</span>
-            <span className="num">01</span>
-          </Title>
-          <Card>
-            <P001 />
-            <p>css</p>
-          </Card>
-          <Card>
-            <P001Lottie />
-            <p>lottie</p>
-          </Card>
-        </Grid>
-      </Row>
+      <Title>
+        <span className="day">Day</span>
+        <span className="num">{today}</span>
+      </Title>
+      <Grid>
+        <Card>
+          <CSSAnimation />
+          <p>css</p>
+        </Card>
+        <Card>
+          <LOTTIEAnimation />
+          <p>lottie</p>
+        </Card>
+      </Grid>
+      <Pagination home handlePrev={handlePrev} />
     </Wrapper>
   );
 };

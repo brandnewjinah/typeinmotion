@@ -1,4 +1,5 @@
 import { primaryFont } from "./Typography";
+import { neutral } from "./colors";
 
 export const mainTheme = {
   primaryFont,
@@ -13,4 +14,5 @@ export const mainTheme = {
   sbody: ".925rem",
   helper: "0.875rem",
   caption: "0.75rem",
+  disalbed: neutral[300],
 };

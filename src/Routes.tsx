@@ -13,7 +13,8 @@ const Routes = () => {
     <Router>
       <Switch>
         <Layout>
-          <Route exact path="/" component={Daily} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/:id" component={Daily} />
         </Layout>
       </Switch>
     </Router>

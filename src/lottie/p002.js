@@ -34,6 +34,7 @@ const Wrapper = styled.div`
   width: 100%;
   height: 240px;
   background-color: lavender;
+  overflow: hidden;
 `;
 
 export default P002;
