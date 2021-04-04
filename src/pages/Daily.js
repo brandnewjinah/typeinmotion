@@ -23,7 +23,7 @@ const Home = () => {
   let currenDate = moment();
   let today = currenDate.diff(startDate, "days") + 1;
 
-  const CSSAnimation = Animations[`a00${id}`];
+  const CSSAnimation = Animations[`a00${id}`] && Animations[`a00${id}`];
   const LOTTIEAnimation = Animations[`a00${id}Lottie`];
 
   let isToday = today === id;
@@ -45,10 +45,12 @@ const Home = () => {
         <span className="num">{id}</span>
       </Title>
       <Grid>
-        <Card>
-          <CSSAnimation />
-          <p>css</p>
-        </Card>
+        {CSSAnimation && (
+          <Card>
+            <CSSAnimation />
+            <p>css</p>
+          </Card>
+        )}
         <Card>
           <LOTTIEAnimation />
           <p>lottie</p>

@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 
 interface Props {}
 
-const Card: FC<Props> = () => {
+const P002: FC<Props> = () => {
   return (
     <Wrapper>
       <Row1>
@@ -54,4 +54,4 @@ const Row1 = styled.div`
   }
 `;
 
-export default Card;
+export default P002;

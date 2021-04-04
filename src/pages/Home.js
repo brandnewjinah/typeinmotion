@@ -16,11 +16,12 @@ import { Animations } from "../helper/Animations";
 
 const Home = () => {
   const history = useHistory();
-  let startDate = moment("2021-04-01");
-  let currenDate = moment();
-  let today = currenDate.diff(startDate, "days") + 1;
+  // let startDate = moment("2021-04-01");
+  // let currenDate = moment();
+  // let today = currenDate.diff(startDate, "days") + 1;
+  let today = 4;
 
-  const CSSAnimation = Animations[`a00${today}`];
+  const CSSAnimation = Animations[`a00${today}`] && Animations[`a00${today}`];
   const LOTTIEAnimation = Animations[`a00${today}Lottie`];
 
   const handlePrev = () => {
@@ -35,10 +36,13 @@ const Home = () => {
         <span className="num">{today}</span>
       </Title>
       <Grid>
-        <Card>
-          <CSSAnimation />
-          <p>css</p>
-        </Card>
+        {CSSAnimation && (
+          <Card>
+            <CSSAnimation />
+            <p>css</p>
+          </Card>
+        )}
+
         <Card>
           <LOTTIEAnimation />
           <p>lottie</p>
