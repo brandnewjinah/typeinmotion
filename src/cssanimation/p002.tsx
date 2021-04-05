@@ -27,8 +27,7 @@ const Wrapper = styled.div`
   font-weight: 500;
   font-size: 4rem;
   overflow: hidden;
-  background-color: aliceblue;
-  -webkit-backface-visibility: hidden;
+  background-color: #fafafa;
 `;
 
 const Row1 = styled.div`

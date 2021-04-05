@@ -6,7 +6,6 @@ import styled from "styled-components";
 import moment from "moment";
 
 //import components
-import Grid from "../components/Grid";
 import Card from "../components/Cards/Card";
 import { mainTheme } from "../components/Tokens";
 import Pagination from "../utility/Pagination";
@@ -24,7 +23,8 @@ const Home = () => {
   let today = currenDate.diff(startDate, "days") + 1;
 
   const CSSAnimation = Animations[`a00${id}`] && Animations[`a00${id}`];
-  const LOTTIEAnimation = Animations[`a00${id}Lottie`];
+  const LOTTIEAnimation =
+    Animations[`a00${id}Lottie`] && Animations[`a00${id}Lottie`];
 
   let isToday = today === id;
 
@@ -46,15 +46,21 @@ const Home = () => {
       </Title>
       <Grid>
         {CSSAnimation && (
-          <Card>
-            <CSSAnimation />
-            <p>css</p>
-          </Card>
+          <div className="col">
+            <Card>
+              <CSSAnimation />
+              <p>css</p>
+            </Card>
+          </div>
         )}
-        <Card>
-          <LOTTIEAnimation />
-          <p>lottie</p>
-        </Card>
+        {LOTTIEAnimation && (
+          <div className="col">
+            <Card>
+              <LOTTIEAnimation />
+              <p>lottie</p>
+            </Card>
+          </div>
+        )}
       </Grid>
       <Pagination
         currPage={id}
@@ -76,6 +82,26 @@ const Wrapper = styled.div`
 
 const Row = styled.section`
   margin: 2rem 0;
+`;
+
+const Grid = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  .col {
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 1280px) {
+  }
 `;
 
 const Title = styled.div`

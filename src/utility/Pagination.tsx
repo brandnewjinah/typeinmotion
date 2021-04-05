@@ -81,6 +81,10 @@ const Wrapper = styled.div`
   div {
     cursor: pointer;
   }
+
+  button {
+    margin: 0 0.5rem;
+  }
 `;
 
 export default Pagination;

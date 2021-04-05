@@ -27,11 +27,11 @@ const Wrapper = styled.div`
   font-weight: 600;
   font-size: 4rem;
   overflow: hidden;
-  background-color: aliceblue;
+  background-color: #fafafa;
 `;
 
 const Row1 = styled.div`
-  animation: scale 3s ease-out;
+  animation: tracking 3s ease-out;
   animation-iteration-count: infinite;
 
   .text {
@@ -39,7 +39,7 @@ const Row1 = styled.div`
     -webkit-font-smoothing: antialiased;
   }
 
-  @keyframes scale {
+  @keyframes tracking {
     0% {
       letter-spacing: 0.5rem;
       opacity: 0;
