@@ -26,7 +26,7 @@ const Pagination: FC<Props> = ({
       {home ? (
         <IconButton
           variant="secondary"
-          color={neutral[200]}
+          color={neutral[300]}
           handleClick={() => handlePrev()}
         >
           <ArrowLeft width={20} height={20} color={neutral[600]} stroke={2} />
@@ -36,7 +36,7 @@ const Pagination: FC<Props> = ({
           {currPage !== 1 && (
             <IconButton
               variant="secondary"
-              color={neutral[200]}
+              color={neutral[300]}
               handleClick={() => handlePrev()}
             >
               <ArrowLeft
@@ -50,7 +50,7 @@ const Pagination: FC<Props> = ({
           {!isToday && (
             <IconButton
               variant="secondary"
-              color={neutral[200]}
+              color={neutral[300]}
               handleClick={() => handleNext()}
             >
               <ArrowRight
@@ -76,7 +76,6 @@ const Flex = css`
 const Wrapper = styled.div`
   ${Flex}
   font-size: ${mainTheme.helper};
-  margin: 2rem 0;
 
   div {
     cursor: pointer;

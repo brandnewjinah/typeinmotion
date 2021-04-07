@@ -6,6 +6,7 @@ import styled from "styled-components";
 import moment from "moment";
 
 //import components
+import Header from "../components/Header";
 import Grid from "../components/Grid";
 import Card from "../components/Cards/Card";
 import { mainTheme } from "../components/Tokens";
@@ -19,7 +20,7 @@ const Home = () => {
   // let startDate = moment("2021-04-01");
   // let currenDate = moment();
   // let today = currenDate.diff(startDate, "days") + 1;
-  let today = 6;
+  let today = 7;
 
   const CSSAnimation = Animations[`a00${today}`] && Animations[`a00${today}`];
   const LOTTIEAnimation = Animations[`a00${today}Lottie`];
@@ -31,23 +32,25 @@ const Home = () => {
 
   return (
     <Wrapper>
-      <Title>
-        <span className="day">Day</span>
-        <span className="num">{today}</span>
-      </Title>
-      <Grid>
-        {CSSAnimation && (
-          <Card>
-            <CSSAnimation />
-            <p>css</p>
-          </Card>
-        )}
-
-        <Card>
-          <LOTTIEAnimation />
-          <p>lottie</p>
-        </Card>
-      </Grid>
+      <Header day={today} />
+      <Main>
+        <Grid>
+          {CSSAnimation && (
+            <div className="col">
+              <Card group="a" label="Method" method="css">
+                <CSSAnimation />
+              </Card>
+            </div>
+          )}
+          {LOTTIEAnimation && (
+            <div className="col">
+              <Card group="b" label="Method" method="lottie">
+                <LOTTIEAnimation />
+              </Card>
+            </div>
+          )}
+        </Grid>
+      </Main>
       <Pagination home handlePrev={handlePrev} />
     </Wrapper>
   );
@@ -61,30 +64,8 @@ const Wrapper = styled.div`
   }
 `;
 
-const Row = styled.section`
-  margin: 2rem 0;
-`;
-
-const Title = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-family: ${mainTheme.primaryFont};
-  font-size: ${mainTheme.header5};
-  font-weight: 400;
-  padding: 2rem 0;
-
-  .day {
-    padding-top: 0.5rem;
-  }
-
-  .num {
-    display: inline-block;
-    font-size: ${mainTheme.header1};
-    font-weight: 700;
-    margin: 0 0.5rem;
-  }
+const Main = styled.main`
+  padding: 2rem;
 `;
 
 export default Home;

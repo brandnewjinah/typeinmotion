@@ -29,7 +29,6 @@ const Wrapper = styled.div`
   font-weight: 600;
   font-size: 4rem;
   overflow: hidden;
-  background-color: #fafafa;
 `;
 
 const Row1 = styled.div`
@@ -45,7 +44,7 @@ const Row1 = styled.div`
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: #fafafa;
+      background-color: #fff;
       animation: p006_reveal 2.8s linear;
       /* animation-timing-function: cubic-bezier(0.5, 0, 0.75, 0); */
       animation-iteration-count: infinite;

@@ -11,14 +11,16 @@ const Grid: FC<Props> = ({ children }) => {
 
 const Wrapper = styled.div`
   display: flex;
+  flex-direction: column;
 
-  @media (min-width: 640px) {
+  .col {
+    width: 100%;
+    padding: 0.5rem;
   }
 
   @media (min-width: 1024px) {
-  }
-
-  @media (min-width: 1280px) {
+    flex-direction: row;
+    justify-content: space-between;
   }
 `;
 

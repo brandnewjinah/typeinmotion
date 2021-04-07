@@ -6,18 +6,11 @@ interface Props {
 }
 
 const Layout: FC<Props> = ({ children }) => {
-  return (
-    <Wrapper>
-      <Container>{children}</Container>
-    </Wrapper>
-  );
+  return <Wrapper>{children}</Wrapper>;
 };
 
-const Wrapper = styled.div``;
-
-const Container = styled.div`
+const Wrapper = styled.div`
   width: 100%;
-  padding: 2rem 16px;
 
   @media (min-width: 640px) {
   }

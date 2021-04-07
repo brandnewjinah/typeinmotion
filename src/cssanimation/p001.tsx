@@ -27,7 +27,7 @@ const Wrapper = styled.div`
   width: 100%;
   height: 240px;
   flex-direction: column;
-  background-color: #fafafa;
+
   font-family: "Fira Sans Extra Condensed", sans-serif;
   font-weight: 700;
   font-size: 2.5rem;

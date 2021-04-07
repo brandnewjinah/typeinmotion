@@ -1,12 +1,17 @@
 export const neutral = {
   10: "#ffffff",
-  100: "#E7E7EC",
-  200: "#C4C4CF",
-  300: "#A0A1B2",
+  100: "#f8f8f8",
+  200: "#eeeeee",
+  300: "#dedede",
   400: "#838494",
   500: "#505165",
   600: "#2A2A43",
   700: "#12143F",
+};
+
+export const accentColor = {
+  green: "#64B6AC",
+  opal: "#F15946",
 };
 
 export const blue = {

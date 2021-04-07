@@ -6,6 +6,8 @@ import styled from "styled-components";
 import moment from "moment";
 
 //import components
+import Header from "../components/Header";
+import Grid from "../components/Grid";
 import Card from "../components/Cards/Card";
 import { mainTheme } from "../components/Tokens";
 import Pagination from "../utility/Pagination";
@@ -40,28 +42,25 @@ const Home = () => {
 
   return (
     <Wrapper>
-      <Title>
-        <span className="day">Day</span>
-        <span className="num">{id}</span>
-      </Title>
-      <Grid>
-        {CSSAnimation && (
-          <div className="col">
-            <Card>
-              <CSSAnimation />
-              <p>css</p>
-            </Card>
-          </div>
-        )}
-        {LOTTIEAnimation && (
-          <div className="col">
-            <Card>
-              <LOTTIEAnimation />
-              <p>lottie</p>
-            </Card>
-          </div>
-        )}
-      </Grid>
+      <Header day={id} />
+      <Main>
+        <Grid>
+          {CSSAnimation && (
+            <div className="col">
+              <Card group="a" label="Method" method="css">
+                <CSSAnimation />
+              </Card>
+            </div>
+          )}
+          {LOTTIEAnimation && (
+            <div className="col">
+              <Card group="b" label="Method" method="lottie">
+                <LOTTIEAnimation />
+              </Card>
+            </div>
+          )}
+        </Grid>
+      </Main>
       <Pagination
         currPage={id}
         isToday={isToday}
@@ -80,50 +79,8 @@ const Wrapper = styled.div`
   }
 `;
 
-const Row = styled.section`
-  margin: 2rem 0;
-`;
-
-const Grid = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  .col {
-    width: 100%;
-  }
-
-  @media (min-width: 640px) {
-  }
-
-  @media (min-width: 1024px) {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  @media (min-width: 1280px) {
-  }
-`;
-
-const Title = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-family: ${mainTheme.primaryFont};
-  font-size: ${mainTheme.header5};
-  font-weight: 400;
-  padding: 2rem 0;
-
-  .day {
-    padding-top: 0.5rem;
-  }
-
-  .num {
-    display: inline-block;
-    font-size: ${mainTheme.header1};
-    font-weight: 700;
-    margin: 0 0.5rem;
-  }
+const Main = styled.main`
+  padding: 2rem;
 `;
 
 export default Home;

@@ -27,7 +27,6 @@ const Wrapper = styled.div`
   font-weight: 600;
   font-size: 4rem;
   overflow: hidden;
-  background-color: #fafafa;
 `;
 
 const Row1 = styled.div`

@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 
 interface Props {}
 
-const P005: FC<Props> = () => {
+const P007: FC<Props> = () => {
   return (
     <Wrapper>
       <Row1>
@@ -30,29 +30,30 @@ const Wrapper = styled.div`
 `;
 
 const Row1 = styled.div`
-  animation: flicker 3s;
-  animation-timing-function: cubic-bezier(0.7, 0, 0.84, 0);
-  animation-iteration-count: infinite;
-
   .text {
-    backface-visibility: hidden;
-    -webkit-font-smoothing: antialiased;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(0, 0, 0, 1);
+    animation: p007_blur 3s;
+    animation-timing-function: cubic-bezier(0.5, 0, 0.84, 0);
+    animation-iteration-count: infinite;
   }
 
-  @keyframes flicker {
+  @keyframes p007_blur {
     0% {
-      letter-spacing: -1.8rem;
-      opacity: 0;
     }
-    15% {
-      letter-spacing: 0;
-      opacity: 1;
+
+    20% {
+      color: transparent;
     }
-    60% {
+    25% {
+      color: black;
+      text-shadow: none;
     }
     100% {
+      color: black;
+      text-shadow: none;
     }
   }
 `;
 
-export default P005;
+export default P007;
