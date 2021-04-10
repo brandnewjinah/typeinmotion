@@ -20,7 +20,7 @@ const Home = () => {
   // let startDate = moment("2021-04-01");
   // let currenDate = moment();
   // let today = currenDate.diff(startDate, "days") + 1;
-  let today = 8;
+  let today = 9;
 
   const CSSAnimation = Animations[`a00${today}`] && Animations[`a00${today}`];
   const LOTTIEAnimation = Animations[`a00${today}Lottie`];

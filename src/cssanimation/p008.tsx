@@ -33,6 +33,7 @@ const Wrapper = styled.div`
 const Row1 = styled.div`
   background: 50% 100% / 10% 10% no-repeat
     radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
