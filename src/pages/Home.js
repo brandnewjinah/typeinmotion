@@ -20,10 +20,13 @@ const Home = () => {
   // let startDate = moment("2021-04-01");
   // let currenDate = moment();
   // let today = currenDate.diff(startDate, "days") + 1;
-  let today = 9;
+  let today = 10;
 
-  const CSSAnimation = Animations[`a00${today}`] && Animations[`a00${today}`];
-  const LOTTIEAnimation = Animations[`a00${today}Lottie`];
+  let num = today.toString().length;
+  num = num === 1 ? `0${today}` : `${today}`;
+
+  const CSSAnimation = Animations[`a0${num}`] && Animations[`a0${num}`];
+  const LOTTIEAnimation = Animations[`a0${num}Lottie`];
 
   const handlePrev = () => {
     let prevPage = today - 1;
