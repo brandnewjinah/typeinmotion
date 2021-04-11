@@ -24,9 +24,12 @@ const Home = () => {
   let currenDate = moment();
   let today = currenDate.diff(startDate, "days") + 1;
 
-  const CSSAnimation = Animations[`a00${id}`] && Animations[`a00${id}`];
+  let num = id.toString().length;
+  num = num === 1 ? `0${id}` : `${id}`;
+
+  const CSSAnimation = Animations[`a0${num}`] && Animations[`a0${num}`];
   const LOTTIEAnimation =
-    Animations[`a00${id}Lottie`] && Animations[`a00${id}Lottie`];
+    Animations[`a0${num}Lottie`] && Animations[`a0${num}Lottie`];
 
   let isToday = today === id;
 

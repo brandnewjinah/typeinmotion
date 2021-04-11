@@ -6,12 +6,12 @@ interface Props {}
 const P001: FC<Props> = () => {
   return (
     <Wrapper>
-      <Row1>
-        <div className="text">HELLO</div>
-      </Row1>
-      <Row2>
-        <div className="text">THERE</div>
-      </Row2>
+      <Row>
+        <div className="text1">HELLO</div>
+      </Row>
+      <Row>
+        <div className="text2">THERE</div>
+      </Row>
     </Wrapper>
   );
 };
@@ -27,19 +27,26 @@ const Wrapper = styled.div`
   width: 100%;
   height: 240px;
   flex-direction: column;
-
   font-family: "Fira Sans Extra Condensed", sans-serif;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 1.75rem;
 
   div {
-    height: 2.5rem;
+    height: 1.75rem;
     overflow: hidden;
+  }
+
+  @media (min-width: 640px) {
+    font-size: 3.5rem;
+
+    div {
+      height: 3.5rem;
+    }
   }
 `;
 
-const Row1 = styled.div`
-  .text {
+const Row = styled.div`
+  .text1 {
     animation: slideup1 3s infinite;
   }
 
@@ -52,20 +59,17 @@ const Row1 = styled.div`
       opacity: 1;
       margin-top: 0;
     }
-    80% {
+    90% {
       opacity: 1;
     }
     100% {
       opacity: 0;
     }
   }
-`;
 
-const Row2 = styled.div`
-  .text {
+  .text2 {
     animation: slideup2 3s infinite;
   }
-
   @keyframes slideup2 {
     0% {
       opacity: 0;
@@ -79,7 +83,7 @@ const Row2 = styled.div`
       opacity: 1;
       margin-top: 0;
     }
-    80% {
+    90% {
       opacity: 1;
     }
     100% {

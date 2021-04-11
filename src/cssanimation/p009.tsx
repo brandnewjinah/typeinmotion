@@ -26,8 +26,12 @@ const Wrapper = styled.div`
   height: 240px;
   font-family: "Fira Sans Extra Condensed", sans-serif;
   font-weight: 600;
-  font-size: 4rem;
+  font-size: 2rem;
   overflow: hidden;
+
+  @media (min-width: 640px) {
+    font-size: 4rem;
+  }
 `;
 
 const Row1 = styled.div`
