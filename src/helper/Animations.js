@@ -9,6 +9,7 @@ import a008 from "../cssanimation/p008";
 import a009 from "../cssanimation/p009";
 import a010 from "../cssanimation/p010";
 import a011 from "../cssanimation/p011";
+import a012 from "../cssanimation/p012";
 
 //import lottie
 import a001Lottie from "../lottie/p001";
@@ -34,6 +35,7 @@ export const Animations = {
   a009,
   a010,
   a011,
+  a012,
   a001Lottie,
   a002Lottie,
   a003Lottie,

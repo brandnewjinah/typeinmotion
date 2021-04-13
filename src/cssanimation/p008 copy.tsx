@@ -35,7 +35,6 @@ const Row1 = styled.div`
     radial-gradient(ellipse at bottom, #fff, transparent, transparent); */
   background: -webkit-linear-gradient(aqua, white);
   -webkit-background-clip: text;
-
   color: transparent;
   animation: P008_reveal 3s;
   animation-timing-function: cubic-bezier(0.5, 0, 0.84, 0);
