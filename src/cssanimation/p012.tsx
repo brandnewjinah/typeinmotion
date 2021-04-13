@@ -40,10 +40,10 @@ const Wrapper = styled.div`
 
 const Row1 = styled.div`
   position: absolute;
-  transform: translate(120%, -50%);
+  /* transform: translate(120%, -50%);
   animation: p012_position 3s;
   animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite; */
 
   span {
     margin: 0 0.5rem;
