@@ -20,7 +20,7 @@ const Home = () => {
   // let startDate = moment("2021-04-01");
   // let currenDate = moment();
   // let today = currenDate.diff(startDate, "days") + 1;
-  let today = 17;
+  let today = 18;
 
   let num = today.toString().length;
   num = num === 1 ? `0${today}` : `${today}`;
