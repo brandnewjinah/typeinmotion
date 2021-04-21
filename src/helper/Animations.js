@@ -29,6 +29,7 @@ import a008Lottie from "../lottie/p008";
 import a009Lottie from "../lottie/p009";
 import a010Lottie from "../lottie/p010";
 import a011Lottie from "../lottie/p011";
+import a020Lottie from "../lottie/p020";
 
 export const Animations = {
   a001,
@@ -48,6 +49,7 @@ export const Animations = {
   a017,
   a018,
   a019,
+
   a001Lottie,
   a002Lottie,
   a003Lottie,
@@ -59,4 +61,5 @@ export const Animations = {
   a009Lottie,
   a010Lottie,
   a011Lottie,
+  a020Lottie,
 };
