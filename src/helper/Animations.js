@@ -16,6 +16,7 @@ import a016 from "../cssanimation/p016";
 import a017 from "../cssanimation/p017";
 import a018 from "../cssanimation/p018";
 import a019 from "../cssanimation/p019";
+import a020 from "../cssanimation/p020";
 
 //import lottie
 import a001Lottie from "../lottie/p001";
@@ -29,7 +30,6 @@ import a008Lottie from "../lottie/p008";
 import a009Lottie from "../lottie/p009";
 import a010Lottie from "../lottie/p010";
 import a011Lottie from "../lottie/p011";
-import a020Lottie from "../lottie/p020";
 
 export const Animations = {
   a001,
@@ -49,6 +49,7 @@ export const Animations = {
   a017,
   a018,
   a019,
+  a020,
 
   a001Lottie,
   a002Lottie,
@@ -61,5 +62,4 @@ export const Animations = {
   a009Lottie,
   a010Lottie,
   a011Lottie,
-  a020Lottie,
 };
